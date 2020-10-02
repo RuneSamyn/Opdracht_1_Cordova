@@ -16,10 +16,40 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
+    <!-- you can use any density that exists in the Android project -->
+    <splash src="www/img/splash_screen.jpg" density="land-hdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="land-ldpi"/>
+    <splash src="www/img/splash_screen.jpg" density="land-mdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="land-xhdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="land-xxhdpi"/>
+
+    <splash src="www/img/splash_screen.jpg" density="port-hdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="port-ldpi"/>
+    <splash src="www/img/splash_screen.jpg" density="port-mdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="port-xhdpi"/>
+    <splash src="www/img/splash_screen.jpg" density="port-xxhdpi"/>
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreenSpinnerColor" value="blue" />
+
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>need camera access to take pictures</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need photo library access to get pictures from there</string>
+    </edit-config>
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need location access to find things nearby</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need photo library access to save pictures there</string>
+    </edit-config>
 </widget>
