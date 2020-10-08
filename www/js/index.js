@@ -61,6 +61,8 @@ function openCamera() {
 }
 
 function displayImage(imgUri) {
+    var card = document.getElementById('card');
+    card.style.visibility = 'visible';
     var foto = document.getElementById('imageCard');
     foto.src = imgUri;
     var text = document.getElementById('imageUrl');

@@ -49,8 +49,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
+    visibility: hidden;
 }
-
 
 #deviceready.ready .event.listening { display: none; }
 #deviceready.ready .event.received { display: block; }
