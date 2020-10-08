@@ -36,13 +36,36 @@
         <meta name="color-scheme" content="light dark">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ms-appdata: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <img id="imageFile">
-            <button onclick="openCamera()">Take photo</button>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-static-top">
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Camera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chat</a>
+                </li>
+            </ul>
+            <!-- Navbar text-->
+            <span class="navbar-brand">Vives</span>
+        </nav>
+
+        <div class="container" >
+            <div class="card" id="card">
+                <img class="card-img-top rounded" id="imageCard">
+                <div class="card-body">
+                    <p class="card-text" id="imageUrl"></p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark" id="cameraBtn">Take photo</button>
         </div>
+
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
