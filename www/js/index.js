@@ -25,7 +25,6 @@ function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    console.log(navigator.camera);
     document.getElementById("cameraBtn").addEventListener("click", openCamera);
 }
 
@@ -65,8 +64,6 @@ function displayImage(imgUri) {
     card.style.visibility = 'visible';
     var foto = document.getElementById('imageCard');
     foto.src = imgUri;
-    var text = document.getElementById('imageUrl');
-    text.innerText = imgUri;
 }
 
 function createNewFileEntry(imgUri) {
